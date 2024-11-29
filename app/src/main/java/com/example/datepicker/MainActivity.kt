@@ -37,6 +37,7 @@ fun ShowDatePicker(context: Context) {
     val date = remember { mutableStateOf("") }
     val datePickerDialog = DatePickerDialog(
         context,
+        R.style.CustomDatePickerTheme,
         { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
             date.value = "$year 年${month + 1} 月$dayOfMonth 日" // 月は0始まりなので+1
         },
